@@ -14,26 +14,30 @@
     >
       <label for="name">
         <span>Nome</span>
-        <input type="text" name="NOME" />
+        <input type="text" name="Nome" />
       </label>
       <br />
       <label for="matricula">
         <span>Matrícula</span>
-        <input type="number" name="matricula" />
+        <input type="number" name="Matricula" />
       </label>
       <br />
       <label for="cargo">
         <span>Cargo</span>
-        <input type="text" name="cargo" />
+        <input type="text" name="Cargo" />
       </label>
       <br />
-      <label for="data" id="dataHora">
+      <label for="data" id="Data-Hora">
         Data
-        <input type="datetime-local" name="data" />
+        <input type="text" id="dataHora" readonly />
       </label>
       <br />
 
       <button type="submit">Enviar</button>
     </form>
   </body>
+  <script>
+    let date = new Date();
+    document.getElementById("dataHora").innerHTML = date;
+  </script>
 </html>
