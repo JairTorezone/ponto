@@ -4,40 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ponto</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Registrar</title>
   </head>
   <body>
-    <h1>Bem-vindo</h1>
-    <form
-      action="https://api.sheetmonkey.io/form/hTswLiVfUHVQRVEoU11wFM"
-      method="post"
-    >
-      <label for="name">
-        <span>Nome</span>
-        <input type="text" name="Nome" />
-      </label>
-      <br />
-      <label for="matricula">
-        <span>Matrícula</span>
-        <input type="number" name="Matricula" />
-      </label>
-      <br />
-      <label for="cargo">
-        <span>Cargo</span>
-        <input type="text" name="Cargo" />
-      </label>
-      <br />
-      <label for="data" id="Data-Hora">
-        Data
-        <input type="text" id="dataHora" readonly />
-      </label>
-      <br />
+    <div class="container">
+      <!--Cabeçalho-logo-->
+      <header class="header">
+        <img src="./assets/image/logotipo.png" alt="" />
+      </header>
 
-      <button type="submit">Enviar</button>
-    </form>
+      <!--Main-Form-->
+      <div class="main">
+        <form
+          action="https://api.sheetmonkey.io/form/aHepYDw5u47V85kLRkma1g"
+          method="post"
+        >
+          <fieldset>
+            <legend>Registrar</legend>
+
+            <label for="matricula">Matrícula:</label> <br />
+            <input type="number" name="Matricula" id="matricula" /> <br />
+
+            <label for="nome">Nome:</label> <br />
+            <input type="text" id="nome" name="Nome" /> <br />
+
+            <label for="cargo">Cargo:</label> <br />
+            <select name="Cargo" id="cargo">
+              <option value="Servente de Limpeza">Servente Limpeza</option>
+              <option value="Servente Escolar ">Servente Escolar</option>
+              <option value="Auxiliar Limpeza ">Auxiliar de Limpeza</option>
+              <option value="Faxineiro ">Faxineiro</option>
+            </select>
+            <br />
+            <!--<input type="text" id="cargo" name="Cargo" /> <br /> -->
+
+            <input type="hidden" id="data" name="Data" value="" /> <br />
+
+            <input type="submit" value="Enviar" id="submit" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
   </body>
-  <script>
-    let date = new Date();
-    document.getElementById("dataHora").innerHTML = date;
-  </script>
+  <script src="./assets/js/script.js"></script>
 </html>
